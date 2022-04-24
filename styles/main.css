@@ -1,0 +1,326 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+   min-height: 100vh;
+   background-color: #e1e1e1;
+}
+
+.container {
+   width: 45rem;
+   margin: 0 auto;
+   padding: 0 1.6rem;
+}
+
+header {
+   padding: 2rem 0;
+   margin-bottom: 40px;
+   background: #3b4483;
+   color: white;
+}
+
+header h1 {
+   font-size: 3rem;
+   font-weight: 700;
+   margin-bottom: 10px;
+   margin-top: 0;
+}
+
+header p {
+   font-size: 1.5rem;
+   font-weight: 400;
+}
+
+#search {
+   width: 30%; 
+   padding: 10px 30px;
+   margin-bottom: 40px;
+   border: 1px solid #22275173;
+   border-radius: 30px;
+   background: url(../images/search-icon-2.png) no-repeat left;
+   background-size: 40px;
+   transition: .3s;
+}
+
+#search::placeholder {
+   color: #222751;
+}
+
+#search:focus {
+   outline: none;
+   border: none;
+   box-shadow: 0 0 10px #22275183;
+}
+
+.list-item {
+   position: relative;
+   text-decoration: none;
+   color: #222751;
+   background: white;
+   border: 1px solid #22275175;
+   margin: 1.6rem 0;
+   padding: 1.6rem;
+   display: block;
+   transition: background .3s ease;
+}
+
+.list-item:hover {
+   box-shadow: 0 8px 20px #6264a2;
+   background: #35409c;
+   color: white;
+   border: none;
+}
+
+.list-item__title {
+   font-size: 1.8rem;
+   margin-bottom: .4rem
+}
+
+.list-item__subtitle {
+   font-size: 1.4rem;
+   font-style: italic;
+}
+
+.list-item button {
+   padding: 20px;
+   border: none;
+   border-radius: 10px;
+   position: absolute;
+   right: 20px;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: #e9edf6;
+   color: #222751;
+   cursor: pointer;
+   transition: .3s ease;
+}
+
+.list-item button:hover {
+   background-color: #0c0e72;
+   color: white;
+   transform: translateY(-60%);
+}
+
+#add {
+   padding: 15px 30px;
+   border: none;
+   background-color: #353774;
+   color: white;
+   cursor: pointer;
+   position: relative;
+}
+
+#add:hover {
+   border: none;
+   color: #353774;
+   background-color: white;
+}
+
+#add::before {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   height: 0;
+   width: 0;
+   background-color: #353774;
+   transition: .60s ease-in;
+}
+
+#add:hover::before {
+   width: 100%;
+   height: 3px;
+}
+
+/* Edit Page Styles */
+.save {
+   background-color: #3b4483;
+   padding: 20px 0;
+   text-align: center;
+}
+
+.save a {
+   text-decoration: none;
+   color: white;
+   font-style: italic;
+   line-height: 1;
+   letter-spacing: 1px;
+   font-size: 20px;
+   position: relative;
+   border-top: 2px solid white;
+   padding-top: 5px;
+}
+
+.save a::before {
+   content: '';
+   position: absolute;
+   width: 35%;
+   height: 2px;
+   background-color: white;
+   top: -5px;
+   transform: rotate(-20deg);
+}
+
+.save a::after {
+   content: '';
+   position: absolute;
+   width: 35%;
+   height: 2px;
+   background-color: white;
+   top: 1px;
+   left: 0;
+   transform: rotate(20deg);
+}
+
+#title {
+   border: 1px solid #DEDFE0;
+   font-size: 2rem;
+   font-weight: 300;
+   display: block;
+   margin: 2.4rem 0;
+   padding: .8rem;
+   width: 100%;
+   color: #222751;
+}
+
+#steps{
+   border: 1px solid #DEDFE0;
+   font-family: inherit;
+   font-size: 1.6rem;
+   font-weight: 300;
+   display: block;
+   margin: 2.4rem 0;
+   min-height: 10rem;
+   padding: .8rem;
+   width: 100%;
+   color: #222751;
+}
+
+.container-head {
+   background-color: #35409c;
+   color: white;
+   text-align: center;
+   padding: 10px 0;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+   font-style: italic;
+}
+
+#ingredients {
+   border: 4px solid #35409c;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 5px;
+   padding: 15px 0;
+   margin-bottom: 20px;
+   max-height: 15rem;
+   overflow: auto;
+}
+
+#ingredients label {
+   flex-basis: 45%;
+   padding: 15px;
+   margin-bottom: 10px;
+   background-color: #2c3968;
+   display: flex;
+   justify-content: space-between;
+   color: white;
+   margin: 0 5px;
+}
+
+#ingredients label input {
+   margin-right: 5px;
+   cursor: pointer;
+}
+
+#ingredients label span:hover {
+   color: #aaa;
+   text-decoration: line-through;
+}
+
+#ingred-name,
+#add-ingredient {
+   width: 24%;
+   height: 40px;
+   font-size: 15px;
+}
+
+#ingred-name:focus {
+   outline: none;
+}
+
+#add-ingredient {
+   border: none;
+   background-color: #35409c;
+   color: white;
+   cursor: pointer;
+}
+
+footer {
+   background-color: #3b4483;
+   position: fixed;
+   bottom: 0;
+   height: 10rem;
+   width: 100%;
+   border-top: 4px solid white;
+}
+
+footer h2 {
+   padding: 20px 0;
+   color: white;
+   font-size: 2.5rem;
+   font-style: italic;
+}
+
+footer #delete {
+   padding: 10px 25px;
+   border: none;
+   background-color: #1034A6;
+   color: white;
+   font-weight: 700;
+   font-size: .9rem;
+   letter-spacing: 1px;
+   cursor: pointer;
+   position: relative;
+
+}
+
+footer #delete::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 3px;
+   width: 0;
+   background-color: #660000;
+   transition: .6s linear;
+}
+
+footer #delete:hover {
+   color: #660000;
+   background-color: white;
+}
+
+footer #delete:hover::before {
+   width: 100%;
+}
+
+.empty {
+   padding: 20px 0;
+   text-align: center;
+   font-size: 20px;
+   color: #222751;
+   margin-bottom: 30px;
+}
+
+#ingredients .empty {
+   margin-bottom: 0;
+}

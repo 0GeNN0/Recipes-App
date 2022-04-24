@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="styles/main.css">
+   <title>Edit Recipe</title>
+</head>
+<body>
+   <div class="save">
+      <a href="index.html">Save</a>
+   </div>
+   <div class="container">
+      <input type="text" id="title" placeholder="Enter Title">
+      <textarea id="steps" placeholder="Enter Steps"></textarea>
+      <h2 class="container-head">Ingredients</h2>
+      <div id="ingredients"></div>
+      <form>
+         <input type="text" id="ingred-name" placeholder=" Enter Ingredient">
+         <button id="add-ingredient">Add Ingredient</button>
+      </form>
+   </div>
+   <footer>
+      <div class="container">
+         <h2 class="footer-head">Danger zone!</h2>
+         <button id="delete">Delete recipe</button>
+      </div>
+   </footer>
+   <script src="scripts/uuidv4.js"></script>
+   <script src="scripts/recipes-functions.js"></script>
+   <script src="scripts/edit.js"></script>
+</body>
+</html>
