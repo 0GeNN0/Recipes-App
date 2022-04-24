@@ -23,13 +23,13 @@
 
 - ## Screenshot
    - Main page
-    ![screenshots-1](images/main-page.png)
+    ![screenshots-1](design/main-page.png)
    - Edit page 
-    ![screenshots-2](images/edit-page.png)
+    ![screenshots-2](design/edit-page.png)
 
 - ### Links
 
-   - Live Site URL: [Recipe App]()
+   - Live Site URL: [Recipe App](https://0genn0.github.io/Recipes-App/)
 
 ## My process
 
